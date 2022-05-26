@@ -5,6 +5,7 @@ import { getUsers } from '../../apis/user';
 /* eslint-disable-next-line */
 export interface StaticRenderingWithIncrementStaticRegenerationProps {
   name: string;
+  createdAt: string;
 }
 
 const StyledStaticRenderingWithIncrementStaticRegeneration = styled.div`
@@ -18,6 +19,7 @@ export const getStaticProps: GetStaticProps<
   return {
     props: {
       name: params.id,
+      createdAt: new Date().toISOString(),
     },
   };
 };
@@ -25,20 +27,21 @@ export const getStaticProps: GetStaticProps<
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [],
-    fallback: "blocking",
+    fallback: 'blocking',
   };
 };
 
 export function StaticRenderingWithIncrementStaticRegenerationById(
   props: StaticRenderingWithIncrementStaticRegenerationProps
 ) {
-  const { name } = props;
+  const { name, createdAt } = props;
   return (
     <StyledStaticRenderingWithIncrementStaticRegeneration>
       <h1>Welcome to StaticRenderingWithIncrementStaticRegenerationById!</h1>
       <h2>User</h2>
       <ul>
         <li>{`name: ${name}`}</li>
+        <li>{`createdAt: ${createdAt}`}</li>
       </ul>
     </StyledStaticRenderingWithIncrementStaticRegeneration>
   );
