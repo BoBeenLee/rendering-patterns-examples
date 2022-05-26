@@ -1,18 +1,35 @@
 import styled from '@emotion/styled';
+import { getUser, User } from '../../apis/user';
 
-/* eslint-disable-next-line */
-export interface StaticRenderingWithStatisPropsProps {}
+export interface StaticRenderingWithStatisPropsProps {
+  user: User;
+}
 
 const StyledStaticRenderingWithStatisProps = styled.div`
   color: pink;
 `;
 
+export async function getStaticProps() {
+  const user = await getUser();
+
+  return {
+    props: {
+      user,
+    },
+  };
+}
+
 export function StaticRenderingWithStatisProps(
   props: StaticRenderingWithStatisPropsProps
 ) {
+  const { user } = props;
   return (
     <StyledStaticRenderingWithStatisProps>
       <h1>Welcome to StaticRenderingWithStatisProps!</h1>
+      <h2>User</h2>
+      <ul>
+        <li>{`name: ${user.name}`}</li>
+      </ul>
     </StyledStaticRenderingWithStatisProps>
   );
 }
