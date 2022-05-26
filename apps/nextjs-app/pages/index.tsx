@@ -13,7 +13,7 @@ const StyledPage = styled.div`
 export function Index() {
   const items: RenderingItem[] = [
     {
-      name: 'plain statuc rendering',
+      name: 'plain static rendering',
       path: '/plain-static-rendering',
     },
     {
