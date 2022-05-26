@@ -23,17 +23,9 @@ export const getStaticProps: GetStaticProps<
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const users = await getUsers();
-
   return {
-    paths: users.map((user) => {
-      return {
-        params: {
-          id: user.name,
-        },
-      };
-    }),
-    fallback: false,
+    paths: [],
+    fallback: "blocking",
   };
 };
 
