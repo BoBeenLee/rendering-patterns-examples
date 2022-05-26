@@ -17,6 +17,10 @@ export function Index() {
       path: '/plain-static-rendering',
     },
     {
+      name: 'server side rendering',
+      path: '/server-side-rendering',
+    },
+    {
       name: 'static rendering with client side fetch',
       path: '/static-rendering-with-client-side-fetch',
     },
