@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
+    "next:build": "next build apps/nextjs-app",
     "test": "nx test"
   },
   "private": true,
