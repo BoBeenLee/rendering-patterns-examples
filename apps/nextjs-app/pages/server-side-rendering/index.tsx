@@ -7,7 +7,7 @@ export interface ServerSideRenderingProps {
 }
 
 const StyledServerSideRendering = styled.div`
-  color: pink;
+  color: black;
 `;
 
 export const getServerSideProps: GetServerSideProps = async () => {

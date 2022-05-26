@@ -8,7 +8,7 @@ export interface StaticRenderingWithIncrementStaticRegenerationProps {
 }
 
 const StyledStaticRenderingWithIncrementStaticRegeneration = styled.div`
-  color: pink;
+  color: black;
 `;
 
 export const getStaticProps: GetStaticProps<

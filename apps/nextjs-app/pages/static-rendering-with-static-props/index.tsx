@@ -7,7 +7,7 @@ export interface StaticRenderingWithStatisPropsProps {
 }
 
 const StyledStaticRenderingWithStatisProps = styled.div`
-  color: pink;
+  color: black;
 `;
 
 export const getStaticProps: GetStaticProps = async () => {
