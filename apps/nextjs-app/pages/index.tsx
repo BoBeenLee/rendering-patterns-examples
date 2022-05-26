@@ -22,7 +22,7 @@ export function Index() {
     },
     {
       name: 'static rendering with increment static regeneration',
-      path: '/static-rendering-with-increment-static-regeneration',
+      path: '/static-rendering-with-increment-static-regeneration/1',
     },
     {
       name: 'static rendering with static props',

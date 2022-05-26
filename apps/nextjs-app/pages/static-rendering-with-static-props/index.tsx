@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { GetStaticProps } from 'next';
 import { getUser, User } from '../../apis/user';
 
 export interface StaticRenderingWithStatisPropsProps {
@@ -9,7 +10,7 @@ const StyledStaticRenderingWithStatisProps = styled.div`
   color: pink;
 `;
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const user = await getUser();
 
   return {
@@ -17,7 +18,7 @@ export async function getStaticProps() {
       user,
     },
   };
-}
+};
 
 export function StaticRenderingWithStatisProps(
   props: StaticRenderingWithStatisPropsProps
