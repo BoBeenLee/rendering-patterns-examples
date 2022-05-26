@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 export interface StaticRenderingWithClientSideFetchProps {}
 
 const StyledStaticRenderingWithClientSideFetch = styled.div`
-  color: black;
+  color: pink;
 `;
 
 export function StaticRenderingWithClientSideFetch(

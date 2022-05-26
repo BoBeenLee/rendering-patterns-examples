@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 export interface PlainStaticRenderingProps {}
 
 const StyledPlainStaticRendering = styled.div`
-  color: black;
+  color: pink;
 `;
 
 export function PlainStaticRendering(props: PlainStaticRenderingProps) {

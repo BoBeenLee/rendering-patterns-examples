@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 export interface StreamingSsrWithReactServerComponentProps {}
 
 const StyledStreamingSsrWithReactServerComponent = styled.div`
-  color: black;
+  color: pink;
 `;
 
 export function StreamingSsrWithReactServerComponent(

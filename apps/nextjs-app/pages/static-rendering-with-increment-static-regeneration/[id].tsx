@@ -8,7 +8,7 @@ export interface StaticRenderingWithIncrementStaticRegenerationProps {
 }
 
 const StyledStaticRenderingWithIncrementStaticRegeneration = styled.div`
-  color: black;
+  color: pink;
 `;
 
 export const getStaticProps: GetStaticProps<
@@ -23,8 +23,16 @@ export const getStaticProps: GetStaticProps<
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const users = await getUsers();
+
   return {
-    paths: [],
+    paths: users.map((user) => {
+      return {
+        params: {
+          id: user.name,
+        },
+      };
+    }),
     fallback: false,
   };
 };
