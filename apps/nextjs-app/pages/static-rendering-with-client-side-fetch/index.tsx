@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { getUser, User } from '../../apis/user';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
+import OrganizationUser from "../../organizations/user.client";
 
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -26,16 +27,9 @@ export function StaticRenderingWithClientSideFetch(
   return (
     <StyledStaticRenderingWithClientSideFetch>
       <h1>Welcome to StaticRenderingWithClientSideFetch!</h1>
-      {user ? (
-        <>
-          <h2>User</h2>
-          <ul>
-            <li>{`name: ${user.name}`}</li>
-          </ul>
-        </>
-      ) : (
-        <h2>loading</h2>
-      )}
+      <Suspense fallback={<h2>loading</h2>}>
+        <OrganizationUser />
+      </Suspense>
     </StyledStaticRenderingWithClientSideFetch>
   );
 }

@@ -55,6 +55,8 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "regenerator-runtime": "0.13.7",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "valtio": "^1.6.1",
+    "zustand": "^4.0.0-rc.1"
   }
 }
